@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# cache
+.cache/
+**/.cache/
+
+# build
+build/
+dist/
+frontend/build/
+
+# env
+.env
+
+# IDE
+.idea/
+
+# database
+*.db
