@@ -19,10 +19,10 @@
   box-shadow: var(--shadow-sm);
 }
 
-.logo-placeholder {
-  width: 100%;
+.login-logo {
+  width: min(180px, 72%);
   height: 80px;
-  margin-bottom: 1px;
+  margin: -8px auto 8px;
   display: flex;
   justify-content: center;
   align-items: center;

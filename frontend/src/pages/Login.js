@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
 
+const BRAND_ASSET_PATH = `${process.env.PUBLIC_URL}/assets/brand`;
+
 const Login = ({ onLogin }) => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
@@ -17,8 +19,19 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <div className="logo-placeholder">
-          {/* Logo joyi */}
+        <div className="login-logo" role="img" aria-label="Keng Makon">
+          <img
+            className="brand-logo-image brand-logo-image-on-light"
+            src={`${BRAND_ASSET_PATH}/km-logo-mark-on-light.png`}
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            className="brand-logo-image brand-logo-image-on-dark"
+            src={`${BRAND_ASSET_PATH}/km-logo-mark-on-dark.png`}
+            alt=""
+            aria-hidden="true"
+          />
         </div>
         
         <h2>Hisobga kirish</h2>

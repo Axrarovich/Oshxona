@@ -13,6 +13,7 @@ import Invoices from './pages/Invoices';
 import Login from './pages/Login';
 
 const THEME_STORAGE_KEY = 'km_oshxona_theme';
+const BRAND_ASSET_PATH = `${process.env.PUBLIC_URL}/assets/brand`;
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -123,6 +124,20 @@ function App() {
           <button type="button" className="menu-toggle" aria-label="Toggle menu" onClick={toggleSidebar}>
             <i className={`fas ${isSidebarOpen ? 'fa-chevron-left' : 'fa-chevron-right'}`}></i>
           </button>
+          <div className="navbar-brand" role="img" aria-label="Keng Makon">
+            <img
+              className="brand-logo-image brand-logo-image-on-light"
+              src={`${BRAND_ASSET_PATH}/km-logo-mark-on-light.png`}
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              className="brand-logo-image brand-logo-image-on-dark"
+              src={`${BRAND_ASSET_PATH}/km-logo-mark-on-dark.png`}
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
         </div>
         <div className="navbar-right">
           <div className="workspace-switcher" ref={workspaceMenuRef}>
